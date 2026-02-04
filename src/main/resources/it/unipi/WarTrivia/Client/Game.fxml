@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefHeight="600.0" prefWidth="800.0" spacing="20.0" styleClass="root" stylesheets="@../../../../styles/theme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.unipi.WarTrivia.Client.GameController">
+   
+   <padding>
+      <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+   </padding>
+   <children>
+   
+      <HBox alignment="CENTER" prefHeight="38.0" prefWidth="740.0" spacing="20.0">
+      <children>
+            <VBox alignment="CENTER_LEFT">
+               <children>
+                  <Label fx:id="questionNumber" alignment="CENTER" prefHeight="34.0" prefWidth="65.0" styleClass="section-title" text="1/10" textAlignment="CENTER">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <Region prefHeight="38.0" prefWidth="181.0" HBox.hgrow="ALWAYS" />
+            <Label fx:id="scoreLabel" alignment="CENTER" prefHeight="19.0" prefWidth="74.0" text="Score" textAlignment="CENTER">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+      </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="45.0" prefWidth="740.0">
+         <children>
+            <Label fx:id="timer" text="timer" textAlignment="CENTER">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   
+      <VBox alignment="CENTER" maxHeight="200.0" prefHeight="150.0" styleClass="card" VBox.vgrow="ALWAYS">
+      <children>
+            <Label fx:id="question" alignment="CENTER" prefHeight="198.0" prefWidth="728.0" styleClass="question-text" text="question" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+      </children>
+      </VBox>
+   
+      <GridPane hgap="15.0" vgap="15.0" VBox.vgrow="ALWAYS">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" percentWidth="50.0" />
+          <ColumnConstraints hgrow="SOMETIMES" percentWidth="50.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints percentHeight="50.0" vgrow="SOMETIMES" />
+          <RowConstraints percentHeight="50.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+      <children>
+            
+            <Button fx:id="button1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#buttonHandler" styleClass="answer-button" text="answer1" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <Button fx:id="button2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#buttonHandler" styleClass="answer-button" text="answer2" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+            <Button fx:id="button3" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#buttonHandler" styleClass="answer-button" text="answer3" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <Button fx:id="button4" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#buttonHandler" styleClass="answer-button" text="answer4" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      </children>
+      </GridPane>
+   </children>
+
+</VBox>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" stylesheets="@../../../../styles/theme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.unipi.WarTrivia.Client.RegisterController">
+   <children>
+      <VBox fx:id="vbox" alignment="CENTER" layoutX="113.0" layoutY="22.0" prefHeight="356.0" prefWidth="538.0" spacing="15.0" stylesheets="@../../../../styles/theme.css" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="113.0" AnchorPane.rightAnchor="113.0" AnchorPane.topAnchor="22.0">
+         <children>
+            <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label text="WarTrivia" textFill="#39a9ff">
+                     <font>
+                        <Font size="50.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <Region minHeight="-Infinity" prefHeight="50.0" prefWidth="200.0" />
+            <Label styleClass="title" text="REGISTRATION">
+               <opaqueInsets>
+                  <Insets bottom="20.0" />
+               </opaqueInsets>
+               <padding>
+                  <Insets bottom="20.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="usernameField" promptText="Username" styleClass="text-field">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets></TextField>
+            <PasswordField fx:id="passwordField" promptText="Password" />
+            <Button fx:id="registrati" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#register" prefHeight="48.0" prefWidth="175.0" text="Submit" textAlignment="CENTER" />
+            <Button fx:id="accedi" mnemonicParsing="false" onAction="#switchToLogin" prefHeight="24.0" prefWidth="88.0" text="Login" textAlignment="JUSTIFY" />
+            <Text fx:id="textField" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" textOrigin="CENTER" wrappingWidth="537.21630859375" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </VBox>
+   </children>
+</AnchorPane>
