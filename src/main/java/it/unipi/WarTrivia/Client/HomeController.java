@@ -441,8 +441,10 @@ public class HomeController implements Initializable {
         }else if(status==Match.MatchStatus.COMPLETED){
         
             boolean iWon=(iAmChallenger&&match.getChallengerScore()>match.getChallengedScore())||(!iAmChallenger&&match.getChallengerScore()<match.getChallengedScore());
-        
+            boolean draw=match.getChallengerScore()==match.getChallengedScore();
+            
             String info=(iWon)?"You won!":"You lost :(";
+            info=(draw)?"It'a draw":info;
         
             if(iAmChallenger){
             
@@ -455,6 +457,9 @@ public class HomeController implements Initializable {
             
             }
             scoreLabel.setStyle(iWon ? "-fx-text-fill: #00cc66;" : "-fx-text-fill: #ff4d4d;");
+            if(draw){
+                scoreLabel.setStyle("-fx-text-fill: orange;");
+            }
         }
         
         scoreLabel.getStyleClass().add("match-score");
